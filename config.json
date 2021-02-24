@@ -1,0 +1,5 @@
+{
+   "token": "TOKEN GOES HERE",
+   "prefix": "!",
+   "mongourl": "MONGO_URL_GOES_HERE"
+}

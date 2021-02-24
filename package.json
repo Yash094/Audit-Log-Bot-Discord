@@ -1,0 +1,22 @@
+{
+  "name": "tutorial_test_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ascii-table": "^0.0.9",
+    "mongoose": "^5.9.15",
+    "discord.js": "^12.5.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
