@@ -7,7 +7,7 @@
 
 [MongoDB LINK](https://www.mongodb.com/)
 * Create a free cluster get you connection url and post it in config.json 
-* Mongo db [documentation](https://github.com/shinchanOP/discord-audit-log-webhook/wiki#obtain-a-connection-string) on how to get mongo url for your bot.
+* Mongo db [documentation](https://github.com/shinchanOP/discord-audit-log-webhook/wiki/HOW-TO-USE-MONGODB) on how to get mongo url for your bot.
 
 ## Installation | How to use the Bot
 
