@@ -17,7 +17,7 @@
 
  **3.** Install all of the packages with **`npm install`**     |  the important packages are   **`npm install discord.js colors mongoose ascii-table`**
 
- **4** Fill in the parameters, RIGHT in `./config.json`
+ **4.** Fill in the parameters, RIGHT in `./config.json`
 
  **5.** start the bot with **`node index.js`**
 
