@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
-const Guild = require("../../models/log");//require our log model
-const mongoose = require("mongoose");
+const db = require("quick.db");
 
 module.exports = {
   name: "setlogchannel",
@@ -10,7 +9,7 @@ module.exports = {
     if (!message.member.hasPermission("MANAGE_GUILD"))
       return message.channel
         .send("You do not have permission to use this command.")
-        .then(m => m.delete({ timeout: 5000 }));// if the user does not have perms
+        .then(m => m.delete({ timeout: 5000 })); // if the user does not have perms
 
     const channel = await message.mentions.channels.first();
     const guild1 = message.guild;
@@ -24,52 +23,21 @@ module.exports = {
         webhookid = webhook.id;
         webhooktoken = webhook.token;
       });
-   
+
     if (!channel)
       return message.channel
         .send(
           "I cannot find that channel. Please mention a channel within this server."
-        )// if the user do not mention a channel
+        ) // if the user do not mention a channel
         .then(m => m.delete({ timeout: 5000 }));
-    
-    await Guild.findOne(//will find data from database
-      {
-        guildID: message.guild.id
-      },
-      async (err, guild) => {
-        if (err) console.error(err);
-        if (!guild) {// what the bot should do if there is no data found for the server
-          const newGuild = new Guild({
-            _id: mongoose.Types.ObjectId(),
-            guildID: message.guild.id,
-            guildName: message.guild.name,
-            logChannelID: channel.id,
-            webhookid: webhookid,
-            webhooktoken: webhooktoken
-          });
-
-          await newGuild
-            .save() //save the data to database(mongodb)
-            .then(result => console.log(result))
-            .catch(err => console.error(err));
-
-          return message.channel.send(
-            `The log channel has been set to ${channel}`
-          );
-        } else {
-          guild
-            .updateOne({ //if data is found then update it with new one
-              logChannelID: channel.id,
-              webhooktoken: webhooktoken,
-              webhookid: webhookid
-            })
-            .catch(err => console.error(err));
-
-          return message.channel.send(
-            `The log channel has been updated to ${channel}`
-          );
-        }
-      }
-    );
+    const data = {
+      logchn: channel.id,
+      webhooktoken: webhooktoken,
+      webhookid: webhookid
+    };
+    db.set(`chn1_${message.guild.id}`, data);
+    return message.channel.send(`The log channel has been set to ${channel}`);
+    let check = await db.get(`chn1_${message.guild.id}`)
+    console.log(check)
   }
 };

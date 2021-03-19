@@ -1,5 +1,5 @@
 {
-   "token": "TOKEN GOES HERE",
-   "prefix": "!",
-   "mongourl": "MONGO_URL_GOES_HERE"
+  "token": "YOUR BOT TOKEN HERE",
+  "prefix": "YOUR PREFIX HERE",
+  "mongourl": "MONGO_URL_GOES_HERE"
 }

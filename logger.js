@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const Guild = require("./models/log");
-const mongoose = require("mongoose");
+const db = require("quick.db");
 
 module.exports = c => {
   console.log("Loaded Logger Module");
@@ -168,7 +167,7 @@ module.exports = c => {
         )
       );
     });
-    
+
     c.on("guildMemberUpdate", function(oldMember, newMember) {
       let options = {};
 
@@ -407,7 +406,7 @@ NEW PERMISSIONS: ${
         );
       }
     });
-   
+
     c.on("userUpdate", function(oldUser, newUser) {
       if (oldUser.username !== newUser.username) {
         send_log(
@@ -434,28 +433,16 @@ async function send_log(c, guild, color, title, description, thumb) {
       .setTimestamp()
       .setThumbnail(thumb ? thumb : guild.iconURL({ format: "png" }))
       .setFooter(
-        guild.name + " | powered by: milrato.eu & Modified by ShinchanOP",
+        guild.name + "Bot Source by ShinchanOP",
         guild.iconURL({ format: "png" })
       );
     //GET THE CHANNEL
-    const guilddb = await Guild.findOne(
-      {
-        guildID: guild.id
-      },
-      (err, guild) => {
-        if (err) console.error(err);
-      }
-    );
-    if (!guilddb) return;
-    const ch = guilddb.logChannelID;
-    const logger = await c.channels.fetch(ch);
-    if (!logger) throw new SyntaxError("CHANNEL NOT FOUND");
+
+    let webhookid = await db.get(`chn1_${guild.id}.webhookid`);
+    let webhooktoken = await db.get(`chn1_${guild.id}.webhooktoken`);
 
     try {
-      const hook = new Discord.WebhookClient(
-        guilddb.webhookid,
-        guilddb.webhooktoken
-      );
+      const hook = new Discord.WebhookClient(webhookid, webhooktoken);
       hook.send({
         username: guild.name,
         avatarURL: guild.iconURL({ format: "png" }),
