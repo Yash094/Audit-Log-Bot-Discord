@@ -1,5 +1,7 @@
 # Discord-audit-log-webhook
 
+<a href=""><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source"></a>
+  
 **Note this Discord Bot Repository is the Same as for the Public Bot [LOGGER BOT](https://discord.com/api/oauth2/authorize?client_id=813806729639886879&permissions=8&scope=bot) if u want to support us,**
 **Please invite [Loggerbot](https://discord.com/api/oauth2/authorize?client_id=813806729639886879&permissions=8&scope=bot)**
 
