@@ -36,6 +36,6 @@ BY [INVITING MY PUBLIC MUSIC BOT 24/7 UPTIME!](https://discord.com/api/oauth2/au
 
 SHINCHAN
 BY [INVITING MY PUBLIC MOD/FUN BOT 24/7 UPTIME](https://discord.com/oauth2/authorize?client_id=687257316151656485&permissions=8&scope=bot)
-
+<a href="https://www.buymeacoffee.com/memerapi" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="28.7" width="121.8"></a>
 This repository only exists, because of these DISCORD BOT, so make sure to invite them, so that we can keep this Repo up to date ;)
 
