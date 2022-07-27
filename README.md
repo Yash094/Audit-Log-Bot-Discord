@@ -22,14 +22,4 @@
 
 *If you are having errors/problems with starting delete the package.json file and do, before you install the packages `npm init`*
 
-*MAKE SURE THAT THE BOT HAS ADMIN*
-
-
-# SUPPORT 
-TOMATO
-BY [INVITING MY PUBLIC MUSIC BOT 24/7 UPTIME!](https://discord.com/api/oauth2/authorize?client_id=742672021422342165&permissions=8&scope=bot)
-
-SHINCHAN
-BY [INVITING MY PUBLIC MOD/FUN BOT 24/7 UPTIME](https://discord.com/oauth2/authorize?client_id=687257316151656485&permissions=8&scope=bot)
-This repository only exists, because of these DISCORD BOT, so make sure to invite them, so that we can keep this Repo up to date ;)
-
+*MAKE SURE THAT THE BOT HAS ADMIN PERMISSIONS*
