@@ -1,14 +1,5 @@
 # Discord-audit-log-webhook
 
-<p>
-  <a href='https://ko-fi.com/Yash094' target='_blank'><img height='35' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-    </p>
-  
-<a href=""><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source"></a>
-  
-**Note this Discord Bot Repository is the Same as for the Public Bot [LOGGER BOT](https://discord.com/api/oauth2/authorize?client_id=813806729639886879&permissions=8&scope=bot) if u want to support us,**
-**Please invite [Loggerbot](https://discord.com/api/oauth2/authorize?client_id=813806729639886879&permissions=8&scope=bot)**
-
 ## MONGODB SETUP
 
 [MongoDB LINK](https://www.mongodb.com/)
